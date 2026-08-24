@@ -1,0 +1,49 @@
+#fs-hud{
+  position:fixed; right:18px; bottom:96px; z-index:2147483000;
+  width:310px; max-height:70vh; overflow:auto;
+  background:#161C25; color:#ECEFF3; border:1px solid #293340; border-radius:13px;
+  box-shadow:0 12px 34px rgba(0,0,0,.42);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:13px; line-height:1.45;
+  padding:13px; display:none;
+}
+#fs-hud.on{display:block;}
+#fs-hud .fs-top{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:9px;}
+#fs-hud .fs-title{font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:#8C97AA; font-weight:600;}
+#fs-hud .fs-x{background:none;border:0;color:#8C97AA;cursor:pointer;font-size:16px;line-height:1;padding:0 2px;}
+#fs-hud .fs-x:hover{color:#ECEFF3;}
+#fs-hud .fs-rule{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px;
+  color:#8C97AA; margin-bottom:10px; display:flex; gap:6px; flex-wrap:wrap; align-items:center;
+}
+#fs-hud .fs-rule b{color:#ECEFF3;}
+#fs-hud .fs-clock{color:#F2AB3E; font-weight:700; font-variant-numeric:tabular-nums;}
+#fs-hud .fs-pick{
+  width:100%; text-align:left; cursor:pointer;
+  background:#392B14; border:1.5px solid #F2AB3E; border-radius:10px;
+  padding:11px 12px; color:#ECEFF3; font-size:21px; font-weight:700;
+  letter-spacing:-.01em; word-break:break-word; margin-bottom:4px;
+}
+#fs-hud .fs-pick:hover{background:#48361a;}
+#fs-hud .fs-pick .fs-n{font-size:11px; color:#F2AB3E; font-weight:600; display:block; margin-top:3px;
+  font-family:ui-monospace,monospace; letter-spacing:.06em;}
+#fs-hud .fs-send{
+  width:100%; cursor:pointer; background:#F2AB3E; color:#131922; border:0;
+  border-radius:9px; padding:9px; font-weight:700; font-size:13px; margin:7px 0 10px;
+}
+#fs-hud .fs-send:hover{background:#ffbc55;}
+#fs-hud .fs-alts{display:flex; flex-wrap:wrap; gap:5px;}
+#fs-hud .fs-alt{
+  background:#1E2631; border:1px solid #293340; border-radius:7px; color:#ECEFF3;
+  padding:5px 8px; font-size:12px; cursor:pointer;
+}
+#fs-hud .fs-alt:hover{border-color:#F2AB3E; color:#F2AB3E;}
+#fs-hud .fs-note{color:#8C97AA; font-size:11px; margin-top:9px;}
+#fs-hud .fs-warn{color:#F2AB3E;}
+#fs-hud .fs-empty{color:#8C97AA; font-size:12px; padding:6px 0;}
+
+/* end-of-game result tints */
+#fs-hud.fs-good { border-color: #2FBF71; box-shadow: 0 0 0 1px rgba(47,191,113,.35), 0 10px 30px rgba(0,0,0,.45); }
+#fs-hud.fs-bad  { border-color: #E5484D; box-shadow: 0 0 0 1px rgba(229,72,77,.35), 0 10px 30px rgba(0,0,0,.45); }
+#fs-hud.fs-good .fs-rule b { color: #2FBF71; }
+#fs-hud.fs-bad  .fs-rule b { color: #E5484D; }

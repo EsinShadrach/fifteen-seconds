@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Fifteen Seconds - WhatsApp word game helper",
+  "version": "1.2.0",
+  "description": "Reads word-game prompts in WhatsApp Web and drafts a valid answer that has not been played yet.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Fifteen Seconds"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": [
+        "dict.js",
+        "sound.js",
+        "content.js"
+      ],
+      "css": [
+        "hud.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
